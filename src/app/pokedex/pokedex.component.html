@@ -1,15 +1,16 @@
 <div class="bg-light-purple p-3 d-flex align-items-center justify-content-center" style="min-height: 100vh;">
   <div *ngIf="pokemon" class="card">
     <div class="container max-w-500 bg-light rounded p-4">
-      <button class="btn btn-primary" (click)="getShiny()"> Mostra shiny</button>
       <img [src]="getImg()" alt="{{pokemon.name}}" width="300px" class="shadown-lg rounded" />
       <img [src]="getShiny()" alt="{{pokemon.name}}" width="300px" class="shadown-lg rounded" />
       <div class="card-body">
         <h2 class="card-title">{{pokemon.name}}</h2>
+        <p class="card-text">id: {{pokemon.id}}</p>
         <p class="card-text">Tipo: {{getType()}}</p>
         <p class="card-text">HP: {{getHp()}}</p>
         <p class="card-text">Altura: {{pokemon.height}} m</p>
         <p class="card-text">Peso: {{pokemon.weight}} kg</p>
+
         <div class="btn-group">
           <button class="btn btn-primary" (click)="previousPokemon()">Anterior</button>
           <button class="btn btn-primary" (click)="nextPokemon()">Próximo</button>
